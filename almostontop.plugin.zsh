@@ -13,7 +13,8 @@ fi
 function _accept_line_almostontop {
   if [ "x$ALMOSONTOP" = "xtrue" ]; then
     # 1. put cursor to the top of the screen
-    tput cup 0 0
+    # tput cup 0 0
+    clear # more portable and allows history scrollback
     # 2. redraw line with prompt and command (with highlighted text as well)
     zle redisplay
   fi
